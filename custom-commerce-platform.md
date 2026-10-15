@@ -4,6 +4,21 @@
 
 A business WooCommerce storefront needed more than standard catalogue and checkout pages. It needed fast product discovery, customer-specific buying, business development reporting, supplier catalogue updates and order administration.
 
+```mermaid
+flowchart LR
+    A["Supplier CSV or product page"] --> B["Import and match"]
+    B --> C["WooCommerce catalogue"]
+    C --> D["Search index and cache"]
+    D --> E["Storefront and basket"]
+    E --> F["Orders"]
+    F --> G["Vendor routing"]
+    F --> H["BDM dashboard"]
+```
+
+## My engineering work
+
+I developed the custom theme and worked on site-specific plugins and import tooling. The work connects the public storefront to business operations: supplier products enter the catalogue, customers see relevant prices, orders reach vendors, and BDMs can review their assigned clients and commission.
+
 ## Storefront and account work
 
 - A modular custom theme for the homepage, catalogue, product pages, search, basket and account views.
@@ -30,6 +45,12 @@ A business WooCommerce storefront needed more than standard catalogue and checko
 ## Technologies
 
 WordPress, WooCommerce, PHP, JavaScript, Playwright-based catalogue preparation, Tailwind CSS, esbuild, SQL, AJAX and scheduled jobs.
+
+## Design decisions
+
+- **Keep operational features in focused plugins.** Pricing, supplier updates, reporting and routing can evolve without turning the theme into one large business-logic file.
+- **Match supplier records deliberately.** SKU and supplier references support updates to existing products, while import reports expose rows that could not be processed.
+- **Reduce unnecessary page work.** Route-specific assets and cache invalidation support faster loading without claiming an unmeasured performance result.
 
 ## Scope and status
 
