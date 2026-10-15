@@ -13,5 +13,7 @@ I build business systems, commerce integrations and workflow automation. These c
 
 Start with the first three: each includes a workflow diagram and the engineering decisions behind it. The remaining pages show related automation, document and hosting work.
 
+The care platform also has a [detailed module map](care-operations-module-map.md) covering recruitment, workforce, scheduling, attendance, payroll, quality, documents and operational modules, with current implementation limits.
+
 The case studies describe work supported by private project source and documentation. They distinguish implemented features from prototypes and do not claim unverified usage figures, performance gains or commercial outcomes.
 
