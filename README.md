@@ -15,5 +15,9 @@ Start with the first three: each includes a workflow diagram and the engineering
 
 The care platform also has a [detailed module map](care-operations-module-map.md) covering recruitment, workforce, scheduling, attendance, payroll, quality, documents and operational modules, with current implementation limits.
 
+The [care platform engineering ecosystem](care-platform-engineering-ecosystem.md) maps the separate Android, document-processing, server and rebuild projects, explaining what each has actually delivered.
+
+For the shared clocking device, staff mobile app and messaging design, read the [kiosk and staff app deep dive](care-operations-kiosk-and-staff-app.md).
+
 The case studies describe work supported by private project source and documentation. They distinguish implemented features from prototypes and do not claim unverified usage figures, performance gains or commercial outcomes.
 
