@@ -8,6 +8,21 @@ Care organisations need to connect recruitment, staff records, compliance, train
 
 A modular PHP and SQL application separates public attendance devices, management dashboards, applicant actions, and staff desktop and mobile experiences. Applicant, staff, authentication and kiosk records have distinct ownership rules. Operational data remains in its source tables, while derived daily payroll facts support consistent reporting.
 
+```mermaid
+flowchart LR
+    A["Recruitment"] --> B["Staff record"]
+    B --> C["Rota planning"]
+    C --> D["Attendance review"]
+    D --> E["Daily payable facts"]
+    E --> F["Payroll reporting"]
+    B --> G["Training and compliance"]
+    G --> H["Supervisions and audits"]
+```
+
+## My engineering work
+
+I worked across the platform architecture, database design and connected operational modules. The most significant design work was keeping applicant, staff, authentication and kiosk identities separate while allowing authorised workflows to move a person from recruitment through employment. I also worked on how planned shifts, clock evidence, manager decisions and contract rules become reportable payable time.
+
 ## Implemented workflows
 
 ### Recruitment and staff
@@ -43,6 +58,12 @@ A modular PHP and SQL application separates public attendance devices, managemen
 ## Technologies
 
 PHP, SQL, server-rendered interfaces, REST-style APIs, JavaScript, background jobs and responsive staff interfaces.
+
+## Design decisions
+
+- **Keep raw evidence separate from decisions.** A clock event is evidence of attendance; it does not automatically become a payable shift. Managers can review exceptions before payroll facts are finalised.
+- **Give each record a clear owner.** Applicant data, staff profiles, login accounts and kiosk identities have different sources of truth, reducing accidental overwrites during onboarding and profile changes.
+- **Track compliance as workflows.** Training, supervision and audits include evidence, review states and follow-up actions rather than a single completion flag.
 
 ## Scope and status
 
