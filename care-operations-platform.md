@@ -76,6 +76,10 @@ The payroll logic handles paid or unpaid breaks, weekly overtime allocation, wee
 
 [Explore the detailed module map](care-operations-module-map.md) for the workflow and implementation boundaries behind these areas.
 
+[See the related engineering projects](care-platform-engineering-ecosystem.md) for the separate Android kiosk shell, document processor and service experiments, with each project's current status.
+
+The [kiosk, staff app and communication deep dive](care-operations-kiosk-and-staff-app.md) explains clocking reliability, offline sync, why raw punches are not automatically paid hours, staff self-service, inbox messages and current chat limits.
+
 ## Document intake and scanning
 
 The document work includes protected upload and viewing, multi-file evidence handling, review state and a cross-source Document Hub index. A developer-oriented scanner intake service watches a private folder, stores incoming PDF/image files, uses filenames or supplied sidecar hints to suggest document type and owner, and can auto-file a strong staff match. Unclear items enter a review queue. This scanner foundation does **not** perform OCR itself; external OCR execution and a full manager review workflow are pending. A separate document-processing service is described in its own [case study](document-processing-service.md).
