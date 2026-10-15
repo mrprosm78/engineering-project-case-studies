@@ -26,6 +26,8 @@ The recruitment implementation preserves submitted evidence and manager actions.
 
 For a shift, the implementation considers the planned interval, linked or nearby clock evidence, manager outcome, approved absence and contract in force that day. It then derives paid, weekend and bank-holiday minutes, including work across local midnight. Weekly overtime is allocated to the month where the payroll week starts. These details matter because a simple clock-out minus clock-in calculation would give the wrong answer for several common cases.
 
+The [kiosk and staff app deep dive](care-operations-kiosk-and-staff-app.md) traces device pairing, unique clock events, offline synchronisation, exception review and the staff-facing approved-hours rule.
+
 ## Quality, governance and evidence
 
 | Module | What the workflow does | Current limit |
@@ -43,7 +45,7 @@ The audit workflow keeps question answers and evidence tied to a run, creates ac
 
 - **Agency staffing:** provider and worker setup, kiosk clocking, manager approval, planned cover and approved-hours CSV for invoice matching. Rate/cost calculations are not yet part of that export.
 - **Resident and room records:** room allocation, moves, discharge and daily presence, with basic on-page counts. Richer occupancy reporting is pending.
-- **Communication:** a feature-flagged central inbox and message/response model for staff and applicants, with audience selection, templates and email alerts. It is disabled by default and the automatic alert trigger still needs completion.
+- **Communication:** a feature-flagged central inbox and message/response model for staff and applicants, with audience selection, templates and optional email alerts. It is disabled by default. Staff-to-staff chat and reply threads are not implemented.
 - **Background work:** registered jobs refresh payroll facts and staff compliance, handle scanner intake and support training-expiry notices. Jobs have their own enablement and operational controls.
 
 ## What this demonstrates
